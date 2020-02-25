@@ -8,10 +8,19 @@ this is the result:
 var a = '{{abc}}';
 
 
-alert("_"+a);
-</script>
+alert(" "+a);
 
+</script>
+{{abc}}
+<br><br><br>
+
+
+
+{%for i in range(0, 6)%} 
+{{abc[i]}}
 <br>
+{%endfor%} 
+
 </div>
 
 </html>

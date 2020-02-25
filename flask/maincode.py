@@ -68,12 +68,20 @@ def returnQuestionSet(sentence):
         global questionCount
         verbs = retunVerb(sentence)
         que = generateFillintheblanks(sentence,verbs[0])
-        distractor = generateDistractor( verbs[0][0],3)
+        distractor = generateDistractor(verbs[0][0],3)
         print("\n",questionCount,que)
         questionCount = questionCount + 1
         print("a.",distractor[0],"\nb.",distractor[1])
         print("c.",distractor[2],"\nd.",verbs[0][0])
-        
+
+        li = []
+        li.append(questionCount)
+        li.append(que)
+        li.append(distractor[0])
+        li.append(distractor[1])
+        li.append(distractor[2])
+        li.append(verbs[0][0])
+        return li
 
 
 
@@ -98,6 +106,6 @@ def returnQuestionSetJSON(sentence):
                   "distractor_4":verbs[0][0],
                   }
         json_object = json.dumps(dict_object)
-        return dict_object
+        return json_object
         #return jsonify(dict_object)
 

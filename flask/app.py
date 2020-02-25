@@ -12,6 +12,12 @@ def generatemcq():
 def generatemcqaa():
         a= maincode.returnQuestionSetJSON('My friends are eating in the palace.')
         return render_template("home.html",abc=a)
+    
+@app.route("/abcd")
+def generatemcqssaassa():
+        a= maincode.returnQuestionSet('My friends are eating in the palace.')
+        return render_template("home.html",abc=a)    
+       
 @app.route("/")
 def home():
 	return render_template("a.html")
