@@ -70,7 +70,7 @@ def returnQuestionSet(sentence):
         que = generateFillintheblanks(sentence,verbs[0])
         distractor = generateDistractor(verbs[0][0],3)
         print("\n",questionCount,que)
-        questionCount = questionCount + 1
+        
         print("a.",distractor[0],"\nb.",distractor[1])
         print("c.",distractor[2],"\nd.",verbs[0][0])
 
@@ -81,8 +81,38 @@ def returnQuestionSet(sentence):
         li.append(distractor[1])
         li.append(distractor[2])
         li.append(verbs[0][0])
+        questionCount = questionCount + 1
+        return li
+questionCount = 1
+def returnQuestionSetasList(sentence):
+        global questionCount
+        verbs = retunVerb(sentence)
+        que = generateFillintheblanks(sentence,verbs[0])
+        distractor = generateDistractor(verbs[0][0],3)
+        print("\n",questionCount,que)
+        
+        print("a.",distractor[0],"\nb.",distractor[1])
+        print("c.",distractor[2],"\nd.",verbs[0][0])
+
+        li = []
+        li.append(questionCount)
+        li.append(que)
+        li.append(distractor[0])
+        li.append(distractor[1])
+        li.append(distractor[2])
+        li.append(verbs[0][0])
+        questionCount = questionCount + 1
         return li
 
+# Now given a paragraph , return all the quesions
+def returnAllQuestions(paragraph):
+        li = []
+        sentences = sent_tokenize(para)
+        for sentence in sentences:
+                li.append(returnQuestionSetasList(sentence))
+        # Display the thing in the html
+        
+        return(li)
 
 
 para = '''My friends are eating in the palace. Your friends waited for you for over an hour. It is not worth paying so much money for this concert. When I reached the station, the train had left. I visited the Taj Mahal last month. The criminal attacked the victim with a blunt object. His company is greatly sought after. The terrified people fled to the mountains.'''
