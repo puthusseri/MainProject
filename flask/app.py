@@ -3,24 +3,25 @@ import sys
 import maincode as maincode
 app = Flask(__name__)
 
-@app.route("/generateMCQ")
+@app.route("/a")
 def generatemcq():
 	return render_template("home.html")
 	
 
     
-@app.route("/abcd")
+@app.route("/abcd", methods=["POST"])
 def generatemcqssaassa():
+        if request.method == "POST":
+                paragraph = request.form['para']
         a= maincode.returnQuestionSet('My friends are eating in the palace.')
         return render_template("home.html",abc=a)    
 
 
-@app.route("/a")
+@app.route("/generateMCQ", methods=["POST"])
 def setee():
-        para = '''My friends are eating in the palace. Your friends waited for you for over an hour. It is not worth paying so much money for this concert. When I reached the station, the train had left. I visited the Taj Mahal last month. The criminal attacked the victim with a blunt object. His company is greatly sought after. The terrified people fled to the mountains.'''
-
-
-        a= maincode.returnAllQuestions(para)
+        if request.method == "POST":
+                paragraph = request.form['para']
+        a= maincode.returnAllQuestions(paragraph)
         return render_template("home.html",abc=a,length = len(a)) 
         
         

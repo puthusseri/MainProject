@@ -107,15 +107,14 @@ def returnQuestionSetasList(sentence):
 # Now given a paragraph , return all the quesions
 def returnAllQuestions(paragraph):
         li = []
-        sentences = sent_tokenize(para)
+        sentences = sent_tokenize(paragraph)
         for sentence in sentences:
                 li.append(returnQuestionSetasList(sentence))
         # Display the thing in the html
-        
         return(li)
 
 
-para = '''My friends are eating in the palace. Your friends waited for you for over an hour. It is not worth paying so much money for this concert. When I reached the station, the train had left. I visited the Taj Mahal last month. The criminal attacked the victim with a blunt object. His company is greatly sought after. The terrified people fled to the mountains.'''
+#para = '''My friends are eating in the palace. Your friends waited for you for over an hour. It is not worth paying so much money for this concert. When I reached the station, the train had left. I visited the Taj Mahal last month. The criminal attacked the victim with a blunt object. His company is greatly sought after. The terrified people fled to the mountains.'''
 
 
 

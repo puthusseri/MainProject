@@ -23,7 +23,7 @@ body {
 	user-select: none; 
 }
 #text {
-	width:500px;
+	width:900px;
 	overflow:hidden;
 	background-color:#FFF;
 	color:#222;
@@ -87,7 +87,7 @@ body {
 	opacity: 0.8;
 }
 #wrapper {
-	width:700px;
+	width:900px;
 	height:auto;
 	margin-left:auto;
 	margin-right:auto;
@@ -105,10 +105,10 @@ $(document).ready(function(){
 </script>
 <div id="wrapper">
 
-	<form id="paper" method="get" action="generateMCQ">
+	<form id="paper" method="post" action="generateMCQ">
 
 		<div id="margin">MCQ GENERATOR </div>
-		<textarea placeholder="Enter the paragraph" id="text" name="text" rows="7" style="overflow: hidden; word-wrap: break-word; resize: none; height: 300px; "></textarea>  
+		<textarea placeholder="Enter the paragraph" id="para" name="para" rows="10" style="overflow: hidden; word-wrap: break-word; resize: none; height: 400px; width: 700px; "></textarea>  
 		<br>
 		<input id="button" type="submit" value="Generate MCQs">
 		
