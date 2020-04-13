@@ -23,3 +23,9 @@ This study aims at creating the MCQ's for a given project. As a starting step Im
 - [ ] Generate the wh questions <br>
 - [ ] Generate the answers for the wh questions <br>
 - [ ] Generate the distractors for the sequence
+
+
+### Setting the virtual environment
+
+The distractor generation part requires the tensorflow = 1.5.0
+Upgrade the pip to version> 19
