@@ -493,7 +493,11 @@ def generateDistractors():
         answer = pad_sequences([seqa],maxlen=max_a,value=0,padding='post')[0]
         distractor = predict_distractors(question,answer)
         distractor = str(distractor)
-        questions_answers_distractors_list.append([que,ans,distractor])
+        distractor = distractor.replace("[","")
+        distractor = distractor.replace("]","")
+        distractor = distractor.replace("'","")
+        distractor = distractor.split(",")
+        questions_answers_distractors_list.append([que,ans,distractor[0],distractor[1],distractor[2]])
 
     for i in range(len(questions_answers_list)):
         que = questions_answers_list[i][0]
