@@ -1,0 +1,16 @@
+       textarea:focus { 
+            outline: none !important;
+            border-color: #719ECE;
+            box-shadow: 0 0 10px #719ECE;
+        }
+
+        .block {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: #4CAF50;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
