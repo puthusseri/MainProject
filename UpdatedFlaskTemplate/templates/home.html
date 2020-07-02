@@ -1,0 +1,39 @@
+<html>
+
+
+<div>
+this is the result:
+
+
+<br><br><br>
+
+
+{%for count in range(0,length)%}
+  <fieldset>
+          <legend>{{count}}</legend>
+          
+        <label for="que">Q.</label>
+        <label>{{abc[count][0]}}</label><br><br>
+
+
+          <input type="radio" name={{abc[count][0]}} id='{{abc[count][0]}}+1'  ><label for='{{abc[count][0]}}+1' >{{abc[count][1]}}</label><br><br>
+
+          
+          <input type="radio" name={{abc[count][0]}} id='{{abc[count][0]}}+2' ><label for ='{{abc[count][0]}}+2'>{{abc[count][2]}}</label><br><br>
+
+          
+          <input type="radio" name={{abc[count][0]}}  id='{{abc[count][0]}}+3'><label for ='{{abc[count][0]}}+3'>{{abc[count][3]}}</label><br><br>
+
+          
+          <input type="radio" name={{abc[count][0]}} id='{{abc[count][0]}}+4'><label for ='{{abc[count][0]}}+4'>{{abc[count][4]}}</label><br><br>
+
+
+        {{abc[count][i]}}
+        
+  </fieldset>
+{%endfor%} 
+
+</div>
+
+</html>
+
